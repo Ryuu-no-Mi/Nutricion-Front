@@ -1,46 +1,157 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/login.css" />
-    <title>Login</title>
+    <title>Login - Web Nutricionista</title>
+    <link rel="stylesheet" type="text/css" href="./styles/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/627932a241.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="main">
       <input type="checkbox" id="chk" aria-hidden="true" />
 
       <div class="signup">
-        <form>
-          <label class="signup_label" for="chk" aria-hidden="true"
+        <form class="formulario" id="formulario">
+          <label class="signup_label label" for="chk" aria-hidden="true"
             >Sign up</label
           >
-          <input type="text" name="txt" placeholder="User name" required="" />
-          <input type="email" name="email" placeholder="Email" required="" />
-          <input
-            type="password"
-            name="pswd"
-            placeholder="Password"
-            required=""
-          />
+          <div class="formulario__grupo" id="grupo__name">
+            <div class="formulario__grupo-input">
+              <input
+                class="input"
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required=""
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+              numeros, letras y guion bajo.
+            </p>
+          </div>
+          <div class="formulario__grupo" id="grupo__lastname">
+            <div class="formulario__grupo-input">
+              <input
+                class="input"
+                id="lastname"
+                type="text"
+                name="surname"
+                placeholder="Lastnames"
+                required=""
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+          </div>
+          <div class="formulario__grupo" id="grupo__phonenumber">
+            <div class="formulario__grupo-input">
+              <input
+                class="input"
+                id="phonenumber"
+                type="number"
+                name="phonenumber"
+                placeholder="Phone Number"
+                required=""
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+          </div>
+          <div class="formulario__grupo" id="grupo__date">
+            <input
+              class="input"
+              id="date"
+              type="date"
+              name="date"
+              required=""
+            />
+          </div>
+          <div class="formulario__grupo" id="grupo__email">
+            <div class="formulario__grupo-input">
+              <input
+                class="input"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="email@email.com"
+                required=""
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+          </div>
+          <div class="formulario__grupo" id="grupo__password">
+            <div class="formulario__grupo-input">
+              <input
+                class="input"
+                id="password"
+                type="password"
+                name="pswd"
+                placeholder="Password"
+                required=""
+              />
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+          </div>
           <button>Sign up</button>
         </form>
       </div>
 
       <div class="login">
-        <form>
-          <label class="login_label" for="chk" aria-hidden="true">Login</label>
-          <input type="email" name="email" placeholder="Email" required="" />
+        <form class="formulario" id="formulario">
+          <label class="login_label label" for="chk" aria-hidden="true"
+            >Login</label
+          >
           <input
+            class="input"
+            id=""
+            type="email"
+            name="email"
+            placeholder="Email"
+            required=""
+          />
+          <input
+            class="input"
+            id=""
             type="password"
             name="pswd"
             placeholder="Password"
             required=""
           />
+          <div class="login_content">
+            <div class="login_box">
+              <input
+                class="chk"
+                type="checkbox"
+                name="rememberMe"
+                id="rememberMe"
+              />
+              <label class="chk_rememberMe" for="rememberMe" aria-hidden="true">
+                Remember Me</label
+              >
+            </div>
+            <a
+              class="login_a"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Forgot password?</a
+            >
+          </div>
           <button>Login</button>
         </form>
       </div>
     </div>
+
+    <script src="./script/formulario.js"></script>
   </body>
 </html>

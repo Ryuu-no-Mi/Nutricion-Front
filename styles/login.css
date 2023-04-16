@@ -11,9 +11,21 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   background: linear-gradient(to bottom, #00b347, #f6f6f6, #00b347);
 }
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #00b347, #f6f6f6, #00b347);
+}
 .main {
-  width: 21.875rem; /* 350px; */
-  height: 31.25rem; /* 500px; */
+  width: 21.875rem;
+  /* width: 350px; */
+  height: 37.5rem;
+  /* height: 600px; */
   background-color: rgb(255, 255, 255);
   overflow: hidden;
   border-radius: 10px;
@@ -27,28 +39,92 @@ body {
   width: 100%;
   height: 100%;
 }
-label {
+
+.label {
   color: #00b347;
   font-size: 2.3rem;
   justify-content: center;
   display: flex;
-  margin: 60px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
-input {
+
+.signup_label {
+  padding: 1.5625rem;
+}
+
+.login_label {
+  margin-top: 125px;
+}
+
+.login_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.login_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.chk_rememberMe {
+  display: inline;
+  color: #00000f;
+  font-size: 0.75rem;
+  margin-left: 0.3125rem;
+}
+
+.login_a {
+  font-size: 1rem;
+  color: #00000f;
+}
+
+.input {
   width: 60%;
   height: 20px;
   background: #e0dede;
   justify-content: center;
   display: flex;
-  margin: 20px auto;
+  margin: 0.75rem auto;
   padding: 10px;
   border: none;
   outline: none;
   border-radius: 5px;
 }
+
+.input:focus {
+  border: 3px solid #0075ff;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__grupo-input {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* INCOMPLETO, NECESITO QUE SE MUESTREN CUANDO NO SE VALIDE*/
+.formulario__validacion-estado,
+.formulario__input-error {
+  display: none;
+}
+
+.formulario__validacion-estado {
+  position: relative;
+  left: -75px;
+}
+
 button {
   width: 65%;
   height: 40px;
@@ -69,6 +145,7 @@ button {
 button:hover {
   background: rgb(170, 170, 170);
 }
+
 .login {
   height: 460px;
   background: rgb(0, 200, 80);
@@ -82,20 +159,16 @@ button:hover {
   transform: scale(0.6);
 }
 
-/* .login label:checked {
-  transform: scale(0.6);
-} */
-
 #chk:checked ~ .login {
-  transform: translateY(-500px);
+  transform: translateY(-650px);
 }
-#chk:checked ~ .login label {
+#chk:checked ~ .login .label {
   transform: scale(1);
   color: #00b347;
 }
 #chk:checked ~ .login {
   background-color: #fff;
 }
-#chk:checked ~ .signup label {
+#chk:checked ~ .signup .label {
   transform: scale(0.6);
 }
