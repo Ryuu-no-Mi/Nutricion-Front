@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Web Nutricionista</title>
-    <link rel="stylesheet" type="text/css" href="./styles/login.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
-      rel="stylesheet"
-    />
     <script
       src="https://kit.fontawesome.com/627932a241.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/login.css" />
   </head>
   <body>
     <div class="main">
       <input type="checkbox" id="chk" aria-hidden="true" />
-
       <div class="signup">
         <form class="formulario" id="formulario">
           <label class="signup_label label" for="chk" aria-hidden="true"
             >Sign up</label
           >
+          <!-- GRUPO NOMBRE -->
           <div class="formulario__grupo" id="grupo__name">
             <div class="formulario__grupo-input">
               <input
@@ -32,50 +32,69 @@
                 type="text"
                 name="name"
                 placeholder="Name"
-                required=""
               />
-              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <i
+                class="i formulario__validacion-estado fas fa-times-circle"
+              ></i>
             </div>
             <p class="formulario__input-error">
-              El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
-              numeros, letras y guion bajo.
+              El nombre del usuario tiene que ser de 4 a 16 dígitos y solo puede
+              contener letras.
             </p>
           </div>
+          <!-- GRUPO APELLIDO -->
+
           <div class="formulario__grupo" id="grupo__lastname">
             <div class="formulario__grupo-input">
               <input
                 class="input"
                 id="lastname"
                 type="text"
-                name="surname"
+                name="lastname"
                 placeholder="Lastnames"
-                required=""
               />
-              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <i
+                class="i formulario__validacion-estado fas fa-times-circle"
+              ></i>
             </div>
+            <p class="formulario__input-error">
+              Los apellidos del usuario tiene que ser de 4 a 20 dígitos y solo
+              puede contener letras.
+            </p>
           </div>
+          <!-- GRUPO NUMERO -->
+
           <div class="formulario__grupo" id="grupo__phonenumber">
             <div class="formulario__grupo-input">
               <input
                 class="input"
                 id="phonenumber"
-                type="number"
+                type="phonenumber"
                 name="phonenumber"
                 placeholder="Phone Number"
-                required=""
               />
-              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <i
+                class="i formulario__validacion-estado fas fa-times-circle"
+              ></i>
             </div>
+            <p class="formulario__input-error">
+              El formato del número de teléfono tiene que ser entre 7 a 14
+              digitos numéricos.
+            </p>
           </div>
+          <!-- GRUPO FECHA -->
+
           <div class="formulario__grupo" id="grupo__date">
-            <input
-              class="input"
-              id="date"
-              type="date"
-              name="date"
-              required=""
-            />
+            <div class="formulario__grupo-input">
+              <input class="input" id="date" type="date" name="date" />
+            </div>
+
+            <p class="formulario__input-error">
+              Se debe rellenar la fecha de nacimiento
+            </p>
           </div>
+          <!-- GRUPO EMAIL -->
+
           <div class="formulario__grupo" id="grupo__email">
             <div class="formulario__grupo-input">
               <input
@@ -84,25 +103,48 @@
                 type="email"
                 name="email"
                 placeholder="email@email.com"
-                required=""
               />
-              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <i
+                class="i formulario__validacion-estado fas fa-times-circle"
+              ></i>
             </div>
+            <p class="formulario__input-error">
+              El fromato del email debe ser: miemail123@email.com
+            </p>
           </div>
+          <!-- GRUPO APELLIDO -->
           <div class="formulario__grupo" id="grupo__password">
             <div class="formulario__grupo-input">
               <input
                 class="input"
                 id="password"
                 type="password"
-                name="pswd"
+                name="password"
                 placeholder="Password"
-                required=""
               />
-              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              <i
+                class="i formulario__validacion-estado fas fa-times-circle"
+              ></i>
             </div>
+            <p class="formulario__input-error">
+              La contraseña debe tener al menos 7 digitos. Recomendamos que use
+              letras mayusculas y minusculas, numeros y guiones.
+            </p>
           </div>
-          <button>Sign up</button>
+
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p>
+              <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
+              favor rellena el formulario correctamente.
+            </p>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+              Formulario enviado exitosamente!
+            </p>
+          </div>
         </form>
       </div>
 
@@ -117,7 +159,6 @@
             type="email"
             name="email"
             placeholder="Email"
-            required=""
           />
           <input
             class="input"
@@ -125,7 +166,6 @@
             type="password"
             name="pswd"
             placeholder="Password"
-            required=""
           />
           <div class="login_content">
             <div class="login_box">
@@ -151,7 +191,6 @@
         </form>
       </div>
     </div>
-
     <script src="./script/formulario.js"></script>
   </body>
 </html>
